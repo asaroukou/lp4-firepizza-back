@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  port:  <%= ENV['POSTGRES_PORT'] %>
+  encoding: unicode
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  pool: 5
+  timeout: 5000
+  host: <%= ENV['POSTGRES_HOST'] %>

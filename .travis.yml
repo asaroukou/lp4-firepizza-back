@@ -1,0 +1,9 @@
+language: ruby
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: VofBU3IGsShxbvYLy7LRNsGW7IT2+doUwOQKgx6QVTf41G3pAmvM+9ezuC0Cg9eRXKcwl7wJHb2smGaf7qwf+0dsYOMtzz/gPzD8v6vwWA6P1Yb9Qz8mW16NglQXUw9qgiZPTR7Qjg9AOqx6rlo071l6w2R5JPRPtE6/EohPAO/lwoJ47/s1PEcc26mYmdztDWPvDAvK3HEntdW4KeJayVj0pJsUFnaj+MPottygoLao68bhAkRnZNr47dMa+0Dn3v1iL4eeiJmHmVrIM22HbfwGQ2Xs6FDkkb5rGv+fGWiS8Cl+hagKe4nOQW42DzTM9WObSyR7Vyx03i3OJxOoJfjp0Oo/EQT0TmKgCA3iCxpkgXlqk3PTmQSDgNhocDB+W7q8FiG0mLNM9Kz2G6AQ07/sMQHif7lYOuRHcqXLrz7HZVfNulLhcBCOiS4hVTUMno7TRLi3p+Rl70gCTnjIUXVL6/F6jLBgqpy9y8UFhi45/b7fiXxiKtaKpFcv4lMLFosYEa8U4UGk3uQCJnGWaRGNMRaA62QJGuzMPHYvUIRSbDECHaY1bigmzZrAyeB352Io+yoOSq7c2W1pJ/7anBZhVpjYow4qBEFyetAPWXWsrOfXHc949WGtgy+qiRyFOrrkwXTuS7WHwi/h8oE8NHwHpId+obpP2phpfBjQD7U=
+  app: lp4-firepizza-back
+  on:
+    repo: asaroukou/lp4-firepizza-back

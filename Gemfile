@@ -13,7 +13,7 @@ end
 group :production do
   gem 'pg', '~> 1.1', '>= 1.1.3'
 end
-
+gem 'dotenv-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

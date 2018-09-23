@@ -9,4 +9,4 @@ deploy:
   on:
     repo: asaroukou/lp4-firepizza-back
 after_script:
-  - bin/rails db:migrate
+  - bin/rails db:setup

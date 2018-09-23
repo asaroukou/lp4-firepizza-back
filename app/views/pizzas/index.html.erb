@@ -7,7 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Price</th>
-      <th>Url</th>
+      <th>Image</th>      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +17,9 @@
       <tr>
         <td><%= pizza.name %></td>
         <td><%= pizza.price %></td>
-        <td><%= pizza.url %></td>
+        <td>
+          <img src="<%= pizza.url %>" width="85" >
+        </td>
         <td><%= link_to 'Show', pizza %></td>
         <td><%= link_to 'Edit', edit_pizza_path(pizza) %></td>
         <td><%= link_to 'Destroy', pizza, method: :delete, data: { confirm: 'Are you sure?' } %></td>

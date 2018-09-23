@@ -15,5 +15,10 @@
   <%= @pizza.url %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <img src="<%= @pizza.url %>" width="300">
+</p>
+
 <%= link_to 'Edit', edit_pizza_path(@pizza) %> |
 <%= link_to 'Back', pizzas_path %>

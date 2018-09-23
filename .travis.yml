@@ -8,3 +8,5 @@ deploy:
   app: lp4-firepizza-back
   on:
     repo: asaroukou/lp4-firepizza-back
+after_script:
+  - rails db:migrate

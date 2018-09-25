@@ -3,4 +3,8 @@ class TestJsonController < ApplicationController
     puts params.inspect
     render json: params
   end
+  
+  def new
+    
+  end
 end

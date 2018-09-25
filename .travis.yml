@@ -1,3 +1,6 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=5ce160737079647695389f0f2dac669e323d5f8bbd1329991f4fe2ddc1974aec
 language: ruby
 rvm:
 - 2.4.4
@@ -8,5 +11,11 @@ deploy:
   app: lp4-firepizza-back
   on:
     repo: asaroukou/lp4-firepizza-back
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  
 after_script:
   - bin/rails db:setup  
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

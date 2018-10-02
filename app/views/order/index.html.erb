@@ -19,7 +19,7 @@
         <td><%= order.adress %></td>
         <td>
         <% order.pizzas.each do |pizza| %>
-            <%= pizza.name %>,           
+            <%= pizza.name %>[<%= pizza.price %>€],           
         <% end %>
         </td>
       </tr>

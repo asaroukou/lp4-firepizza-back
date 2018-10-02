@@ -17,5 +17,6 @@ before_script:
   - ./cc-test-reporter before-build
   
 after_script:
-  - bin/rails db:setup  
+  - bin/rails db:setup 
+  - bin/rails db:migrate
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Commandes</h1>
+
+    
+<table border="1">
+  <thead>
+    <tr>
+      <th>Nom client:</th>
+      <th>Adresse de livraison :</th>
+      <th>Pizzas commandées :</th>            
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.name %></td>
+        <td><%= order.adress %></td>
+        <td>
+        <% order.pizzas.each do |pizza| %>
+            <%= pizza.name %>,           
+        <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nouvelle commande', new_order_path %>
